@@ -12,6 +12,13 @@ body {
   background-color: #feffed;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Bricolage Grotesque";
+  background-color: #feffed;
+}
+
 /* Navbar styling */
 .navbar {
   display: flex;
@@ -69,7 +76,40 @@ body {
   gap: 15px;
 }
 
-.nav-icons input {
+.nav-icons,.navicons-responsive input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px 12px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.nav-icons, .navicons-responsive input:focus {
+  border-color: #73e5ae;
+}
+
+.nav-icons,.navicons-responsive a {
+  color: #000000;
+  font-size: 1px;
+  width: 12px;
+  margin-inline: 6px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-icons,.navicons-responsive a:hover {
+  color: #0781d3;
+}
+
+
+/* Icons and search */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-icons,.navicons-responsive input {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 6px 12px;
@@ -662,9 +702,15 @@ body {
 }
 
 
+.navicons-responsive{
+  display: none;
+}
  @media (max-width: 427px) {
+  .navicons-responsive {
+    display: block ;
+  }
   
-  .nav-laptop{
+  .nav-links, .nav-icons{
     display: none;
   }
 
@@ -672,6 +718,14 @@ body {
     padding-inline: 10px;
   }
 
+
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+  }
   .banner {
     flex-direction: column;
     align-items: center;
