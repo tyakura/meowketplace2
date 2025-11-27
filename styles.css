@@ -705,6 +705,8 @@ body {
 .navicons-responsive{
   display: none;
 }
+
+
  @media (max-width: 427px) {
   .navicons-responsive {
     display: block ;
@@ -722,11 +724,11 @@ body {
     height: 180px;
   }
   .hero-text h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-text h1 {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   
   .btn{
@@ -740,6 +742,20 @@ body {
     margin-bottom: -70px;
   }
 
+  .categories {
+    grid-template-columns:  1fr 1fr;
+  }
+
+.category-tabs {
+  gap: 10px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 1px !important;
+
+}
   .banner {
     flex-direction: column;
     align-items: center;
