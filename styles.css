@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #feffed;
+  background-color: #ffffff;
   padding: 10px 150px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -76,40 +76,7 @@ body {
   gap: 15px;
 }
 
-.nav-icons,.navicons-responsive input {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 6px 12px;
-  outline: none;
-  transition: 0.3s;
-}
-
-.nav-icons, .navicons-responsive input:focus {
-  border-color: #73e5ae;
-}
-
-.nav-icons,.navicons-responsive a {
-  color: #000000;
-  font-size: 1px;
-  width: 12px;
-  margin-inline: 6px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.nav-icons,.navicons-responsive a:hover {
-  color: #0781d3;
-}
-
-
-/* Icons and search */
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.nav-icons,.navicons-responsive input {
+.nav-icons input {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 6px 12px;
@@ -723,6 +690,10 @@ body {
   .hero {
     height: 180px;
   }
+
+  .hero-text {
+    margin-left: 30px;
+  }
   .hero-text h2 {
     font-size: 2rem;
   }
@@ -740,6 +711,7 @@ body {
   .hero-image img {
     max-height: 230px;
     margin-bottom: -70px;
+    margin-right: 20px;
   }
 
   .categories {
@@ -748,24 +720,41 @@ body {
 
 .category-tabs {
   gap: 10px;
+  /* margin-bottom: 1px; */
 }
 .product-grid {
+  overflow-x: auto;
+  /* white-space: nowrap; */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 1px !important;
-
+  margin: 10px;
 }
+
+.card-body {
+  padding: 10px;
+  padding-top: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list {
+  margin-bottom: 10px;
+  width: 200px;
+}
+
   .banner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; \*/
   }
 
   .banner-content {
     max-width: 100%;
     padding: 20px;
+    margin-left: 0px;
   }
 
   .banner-content h1 {
@@ -783,6 +772,22 @@ body {
 
   .hero {
     padding-inline: 0px !important;
+  }
+
+  .features {
+    flex-direction: column;
+    margin-inline: 10px;
+  }
+
+  .feature {
+    padding: 0;
+  }
+
+  .divider {
+    width: 10px;
+    background: #0a5d73;
+    border-radius: 8px;
+    opacity: 0.9;
   }
 } 
 
