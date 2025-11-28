@@ -25,6 +25,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .logo img {
   width: 50px;
   height: 50px;
@@ -139,6 +140,7 @@ body {
   margin-left: 2rem;
   line-height: 2;
 }
+
 .our-vision {
   /* background-image: url("https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEX2PTzmngc%2BvM5zWnaHPQocByRby2uLwDucqrG%2FzW%2Fdbx1TXo41obhT4qIGH5mYV8LbY38I50emunGfN0HxIIvfZx93%2Fnejodi%2FEVZXR1xx5VVkyTxKHhlGU48brNaTHWD2FIgbDJrUKaZN7HxcEHDLTxtHCAcucdRb2CmhzZnLIs4FU5jZRBw0%2BGjc3yTp5D%2FQLlngcOmzDM1f94t1%2FfmjeiI94QK6%2BqCMiwwbECuqky%2BZ4C0j3jJzKN7RwEL8LGoy94cqbLhVVSMMuDt0BKx6CTfPkBTeVK0atVgKQXrH0rxDcuu964mgrgmkcOuFYspcagFRYMjM9AAemoE6G8%2BICpcioUz2k8Bp9Va09dRo%2FrP%2BC9%2FylxKnUwE2X9%2B2AYVjdRruRrFoTL5SWV24hIz5XrriVAqSEWlP5MtrKP0L4LRVOxvQ6rRiX4A2%2F4d3QKjuEQnGcPCLbfzZGVgBK%2FUxVRe3QsNR8%2F0Fe3ETdsyLNOeUwyGEGZeqtH4vExyznWne5IgrkFcfN7V%2BILsDhq2x5jbqNQWnLGpM7CYl7KQhfWlDAg%2FJu8sY0iY%2FZORJyt6CsgFRyTMqWaqz&allow_caching=true&sz=w512"); */
   background-image: url(woman-abt.png);
@@ -337,8 +339,10 @@ h2 {
   background: rgba(0, 0, 0, 0.65);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* supaya teks sejajar tengah */
-  padding-left: auto; /* sejajarkan dengan h1 */
+  justify-content: center;
+  /* supaya teks sejajar tengah */
+  padding-left: auto;
+  /* sejajarkan dengan h1 */
   opacity: 0;
   transition: 0.3s;
   color: white;
@@ -516,20 +520,73 @@ h2 {
   opacity: 1;
 }
 
-.navicons-responsive{
+.navicons-responsive {
   display: none;
 }
 
 @media (max-width: 427px) {
   .navicons-responsive {
-    display: block ;
+    display: block;
   }
-  
-  .nav-links, .nav-icons{
+
+  .nav-links,
+  .nav-icons {
     display: none;
   }
 
   .navbar {
     padding-inline: 10px;
   }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 200px 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: url(https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVZpgk3kKvnYxE955yRlA8ls7qz%2FRxYGMR9cOrF0w7BXg96PAW8B2CBWLlbxW9McnP4zkvAHkG5d5TZ8VVk6fMqSjHzOMweKUbSSOOVxGVmmaD9idwoB0PBRI5QOfEZXQX1W6UJ4I5ELm7BLuUlI5fDH8Pa12HPLIAZ0g35NJsFhc%2BdD47ePe10yv80xfvldfLBzyKDwSuM6QmGpXZqEQ%2FdyaHa76lL%2FMyDZZTsGMKK6T%2BttFoYoA9fR4NO1GWDVuU26UFUD7eU0hkDRXWqYnnvMBPyyC2SHG9P7mrpOa9JywEGSWOJNvBeYV4pP8VTf3Y%2B%2Bh6vbEn57X5GUIT9uppc3haBUCxrj3qcSHJfpE8j2oZucmjobldKe8JRcMl4s5E7Py7TUZvU2sO3Nr5TCnf8FvAbXzQ57u6INq27DksCPp7A9yBE54Mp5ZaHrVTYTl76TVb%2BwuQPQGTo3jKHIXSfKAjpTtidis7WA4myCqVv3LKnfyBHwMLU62gNXDc%2FaInGthaF%2FXS4GwQ4dj6kc4qc1ZBWH9Gp0xXhOSJJyFyMBbDLZpGB5p%2FOjalDpC5dy5hu9E59bh%2BJLdyDpA%3D%3D&allow_caching=true&sz=w512); */
+    background-image: url(cat-abt.png)
+  }
+
+  .our-mission {
+    display: flex;
+    background-color: #3282b8;
+    height: 70vh;
+    flex-direction: column;
+    gap: 0rem;
+    margin: auto;
+    padding-top: 1rem ;
+    
+  }
+  .om {
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 55px;
+    color: #bbe1fa;
+    display: flex;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    margin-block: 10px;
+    margin-inline: auto;
 }
+
+  .our-mission p {
+    /* text-align: center; */
+    margin-top: 2rem;
+    color: white;
+    width: 80%;
+    font-size: 15px;
+    margin-block: 0;
+    margin-inline: 10%;
+    /* margin-left: 0; */
+    line-height: 1.5;
+}
+}
+
