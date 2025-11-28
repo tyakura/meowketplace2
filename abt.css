@@ -515,3 +515,21 @@ h2 {
 .card:hover .hover-box {
   opacity: 1;
 }
+
+.navicons-responsive{
+  display: none;
+}
+
+@media (max-width: 427px) {
+  .navicons-responsive {
+    display: block ;
+  }
+  
+  .nav-links, .nav-icons{
+    display: none;
+  }
+
+  .navbar {
+    padding-inline: 10px;
+  }
+}
