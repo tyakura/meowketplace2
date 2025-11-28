@@ -255,7 +255,7 @@ h2 {
 
 .card {
   position: relative;
-  margin: auto;
+  /* margin: auto; */
   width: 450px;
   height: 450px;
   overflow: hidden;
@@ -447,11 +447,8 @@ h2 {
 }
 
 /* Active state */
-.scroll-reveal.active {
-  opacity: 1;
-  transform: none;
-  transition-delay: var(--delay, 0ms);
-}
+
+
 
 .reveal-up {
   transform: translateY(45px);
@@ -639,17 +636,39 @@ h2 {
     font-size: 45px;
     display: flex;
     white-space: nowrap;
+    margin-top: 2rem;
     margin-block: 1rem;
     margin-left: 0;
     color: #0f4c75;
-}
+  }
 
-.our-values p {
-  width: 85%;
+  .our-values p {
+    width: 85%;
     font-size: 15px;
     margin-block: 1rem;
     margin-inline: 10%;
     /* margin-left: 2rem; */
     line-height: 1.5;
-}
+  }
+
+  .tim {
+    width: 100%;
+  }
+  .foto {
+    width: 100%;
+  }
+  .atas {
+    margin: 0px ;
+    flex-direction: column;
+  }
+
+  .bawah {
+    margin: 0px;
+    flex-direction: column;
+  }
+  .card {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
