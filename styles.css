@@ -675,6 +675,13 @@ body {
 
 
  @media (max-width: 427px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Bricolage Grotesque";
+    background-color: #feffed;
+  }
+  
   .navicons-responsive {
     display: block ;
   }
@@ -748,7 +755,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* padding: 20px; \*/
+    padding: 0px; 
   }
 
   .banner-content {
@@ -767,7 +774,7 @@ body {
   }
 
   .banner-image img {
-    max-height: 250px;
+    max-height: 240px;
   }
 
   .hero {
@@ -781,6 +788,7 @@ body {
 
   .feature {
     padding: 0;
+    margin: auto;
   }
 
   .divider {
@@ -789,6 +797,13 @@ body {
     border-radius: 8px;
     opacity: 0.9;
   }
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
 } 
 
 
