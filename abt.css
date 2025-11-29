@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
+html {
+  display: block !important;
+}
 body {
   padding: 0;
   margin: 0;
   font-family: "Bricolage Grotesque";
   background-color: #feffed;
 }
+
 
 /* Navbar styling */
 .navbar {
@@ -429,7 +434,7 @@ h2 {
 .social-icons img {
   color: white;
   font-size: 22px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   width: 20px;
   border-radius: 10px;
 }
@@ -441,12 +446,17 @@ h2 {
 
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translatex(40px);
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   will-change: opacity, transform, clip-path;
 }
 
 /* Active state */
+.scroll-reveal.active {
+  opacity: 1;
+  transform: none;
+  transition-delay: var(--delay, 0ms);
+}
 
 .reveal-up {
   transform: translateY(45px);
@@ -471,7 +481,7 @@ h2 {
 .reveal-mask {
   opacity: 1;
   clip-path: inset(0 100% 0 0);
-  transition: clip-path 1s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.3s;
+  transition:  clip-path 1s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.3s;
 }
 
 .reveal-mask.active {
@@ -498,7 +508,7 @@ h2 {
 }
 
 .card img {
-  transition: transform 0.6s ease;
+  transition: transform 0.3s ease;
 }
 
 .card:hover img {
@@ -519,6 +529,10 @@ h2 {
   display: none;
 }
 
+
+.addbr{
+  display: none;
+}
 @media (max-width: 427px) {
   .navicons-responsive {
     display: block;
@@ -649,14 +663,32 @@ h2 {
     line-height: 1.5;
   }
 
+  .ov, .op, .om {
+    margin-top: 3rem;
+    height: 80vh !important;
+  }
+
+  .addbr {
+    display: block;
+  }
   .tim {
     width: 100%;
   }
+
+  .tim h1 {
+    margin-bottom: 3rem;
+  }
+
   .foto {
     width: 100%;
+    
   }
+
   .atas {
-    margin: 0px ;
+    height: 0%;
+    gap: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
     flex-direction: column;
   }
 
@@ -664,9 +696,56 @@ h2 {
     margin: 0px;
     flex-direction: column;
   }
+
   .card {
     margin: 0;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
   }
+
+  .footer{
+    margin-top: 1rem !important;
 }
+
+  .foto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 5px;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .atas, .bawah {
+    display: contents; /* biar semua card langsung masuk ke grid */
+  }
+
+  .card {
+    width: 100%;   /* ukuran pas HP */
+    height: 220px;
+  }
+
+  /* kecilkan teks nama */
+  .affan, .malik, .hilmi, .attaya, .hapit {
+    font-size: 10px;
+  }
+
+  /* hover box lebih kecil */
+  .card .hover-box h1 {
+    font-size: 15px;
+  }
+
+  .card .hover-box p {
+    margin-left: 20px;
+    font-size: 10px;
+  }
+  .hilmiv {
+    grid-column: span 2 ;
+    width: 50%;
+    margin-inline: 10px;
+  }
+
+  .card .hilmiv{
+    width:50%;
+
+  }
+ }

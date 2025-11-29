@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!el.classList.contains("active") && rect.top < triggerPoint) {
         el.style.setProperty("--delay", `${delay}ms`);
         el.classList.add("active");
-        delay += 120;
+        delay += 1;
       }
     });
   };
