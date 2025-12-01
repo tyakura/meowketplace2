@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".scroll-reveal");
 
@@ -19,4 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 
   window.addEventListener("scroll", revealOnScroll);
+});
+
+
+const hamburger = document.getElementById("hamburger");
+const dropdown = document.getElementById("dropdownMenu");
+
+hamburger.addEventListener("click", () => {
+  dropdown.classList.toggle("actives");
 });

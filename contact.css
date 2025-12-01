@@ -25,6 +25,7 @@ body {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 .logo img {
   width: 50px;
   height: 50px;
@@ -92,7 +93,8 @@ body {
 .contact-banner {
   width: 100%;
   height: 500px;
-  background-image: url("Rectangle\ 26.png"); /* file yang sudah kamu download */
+  background-image: url("Rectangle\ 26.png");
+  /* file yang sudah kamu download */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -425,4 +427,184 @@ body {
 .product-card.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.navicons-responsive {
+  display: none;
+}
+
+.navlinks-icon {
+  display: none;
+}
+
+.dropdown-responsive {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width:427px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Bricolage Grotesque";
+    background-color: #feffed;
+  }
+
+  .navicons-responsive {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-icons {
+    display: none;
+  }
+
+  .navbar {
+    padding-inline: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown-responsive {
+    display: block;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 180px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Saat aktif */
+  .dropdown-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdown-menu a {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-menu hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0;
+  }
+
+  .dropdown-menu .icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+
+  .navlinks-icon {
+    display: block;
+  }
+
+  .top-boxes {
+    width: 80%;
+    gap: 10px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 20px 0px;
+
+  }
+
+  .info-box h4 {
+    font-size: 14px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+  }
+
+  .location {
+
+    grid-column: span 2;
+  }
+
+  .contact-container {
+    width: 80%;
+  }
+
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .left input {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .send-btn {
+    margin-left: 0px;
+  }
+
+  .map {
+    width: 80%;
+  }
+
+  .map h2 {
+    font-size: 40px;
+  }
+
+  .map p {
+    font-size: 15px;
+  }
+
+  .map-img iframe{
+    width: 100%;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
 }

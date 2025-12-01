@@ -4,6 +4,7 @@
 html {
   display: block !important;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -18,7 +19,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #feffed;
-  padding: 10px 40px;
+  padding: 10px 150px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -481,7 +482,7 @@ h2 {
 .reveal-mask {
   opacity: 1;
   clip-path: inset(0 100% 0 0);
-  transition:  clip-path 1s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.3s;
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.3s;
 }
 
 .reveal-mask.active {
@@ -529,11 +530,94 @@ h2 {
   display: none;
 }
 
-
-.addbr{
+.addbr {
   display: none;
 }
+
+.navlinks-icon {
+  display: none;
+}
+
+.dropdown-responsive {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
 @media (max-width: 427px) {
+.dropdown-menu{
+  display: block;
+}
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown-responsive {
+    display: contents !important;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 180px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Saat aktif */
+  .dropdown-menu.actives {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdown-menu a {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-menu hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0;
+  }
+
+  .dropdown-menu .icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+  .navlinks-icon {
+    display: block;
+  }
+
   .navicons-responsive {
     display: block;
   }
@@ -659,18 +743,37 @@ h2 {
     font-size: 15px;
     margin-block: 1rem;
     margin-inline: 10%;
+    margin-bottom: 2rem;
     /* margin-left: 2rem; */
     line-height: 1.5;
   }
 
-  .ov, .op, .om {
+  .our-mission,
+  .our-values,
+  .our-vision {
+    height: 80vh;
+  }
+
+  .ov,
+  .op,
+  .om p {
+    /* margin-top: 3rem; */
+    margin-bottom: 2rem;
+    /* height: 80vh !important; */
+  }
+
+  .ov,
+  .op,
+  .om {
     margin-top: 3rem;
-    height: 80vh !important;
+    margin-bottom: 1rem;
+    /* height: 80vh !important; */
   }
 
   .addbr {
     display: block;
   }
+
   .tim {
     width: 100%;
   }
@@ -681,7 +784,7 @@ h2 {
 
   .foto {
     width: 100%;
-    
+
   }
 
   .atas {
@@ -703,29 +806,37 @@ h2 {
     /* height: 100%; */
   }
 
-  .footer{
+  .footer {
     margin-top: 1rem !important;
-}
+  }
 
   .foto {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 kolom */
     gap: 5px;
     justify-items: center;
     width: 100%;
   }
 
-  .atas, .bawah {
-    display: contents; /* biar semua card langsung masuk ke grid */
+  .atas,
+  .bawah {
+    display: contents;
+    /* biar semua card langsung masuk ke grid */
   }
 
   .card {
-    width: 100%;   /* ukuran pas HP */
+    width: 100%;
+    /* ukuran pas HP */
     height: 220px;
   }
 
   /* kecilkan teks nama */
-  .affan, .malik, .hilmi, .attaya, .hapit {
+  .affan,
+  .malik,
+  .hilmi,
+  .attaya,
+  .hapit {
     font-size: 10px;
   }
 
@@ -738,14 +849,22 @@ h2 {
     margin-left: 20px;
     font-size: 10px;
   }
+
   .hilmiv {
-    grid-column: span 2 ;
+    grid-column: span 2;
     width: 50%;
     margin-inline: 10px;
   }
 
-  .card .hilmiv{
-    width:50%;
+  .card .hilmiv {
+    width: 50%;
 
   }
- }
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

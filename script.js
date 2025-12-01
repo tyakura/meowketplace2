@@ -135,3 +135,10 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".scroll-animate").forEach((el) => {
   observer.observe(el);
 });
+
+const hamburger = document.getElementById("hamburger");
+const dropdown = document.getElementById("dropdownMenu");
+
+hamburger.addEventListener("click", () => {
+  dropdown.classList.toggle("active");
+});

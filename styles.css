@@ -37,6 +37,7 @@ body {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 .logo img {
   width: 50px;
   height: 50px;
@@ -107,18 +108,14 @@ body {
   align-items: center;
   justify-content: space-evenly;
   /* background-color: #256aa5; biru background */
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       #1b4d75 0%,
       #256ba2 40%,
       #3b8fcf 75%,
-      #1b4d75 100%
-    ),
-    radial-gradient(
-      circle at 90% 50%,
+      #1b4d75 100%),
+    radial-gradient(circle at 90% 50%,
       rgba(255, 255, 255, 0.15),
-      transparent 60%
-    );
+      transparent 60%);
   background-blend-mode: screen;
   color: #fff;
   padding: 60px 100px;
@@ -130,7 +127,8 @@ body {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; /* 👉 biar nempel di bawah */
+  align-items: flex-end;
+  /* 👉 biar nempel di bawah */
 }
 
 .hero-image img {
@@ -138,9 +136,11 @@ body {
   width: auto;
   border-radius: 0px;
   object-fit: contain;
-  margin-bottom: 0; /* pastiin gak ada jarak bawah */
+  margin-bottom: 0;
+  /* pastiin gak ada jarak bawah */
   margin-right: 150px;
 }
+
 .hero-text {
   flex: 1;
   margin-left: 50px;
@@ -304,8 +304,10 @@ body {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px; /* jarak antar kolom */
-  row-gap: 1px !important; /* jarak antar baris (BARU utk bikin baris kedua rapi) */
+  column-gap: 20px;
+  /* jarak antar kolom */
+  row-gap: 1px !important;
+  /* jarak antar baris (BARU utk bikin baris kedua rapi) */
 }
 
 .product-card {
@@ -411,23 +413,20 @@ body {
 .banner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* Sesuai dengan style inline Anda */
+  align-items: flex-end;
+  /* Sesuai dengan style inline Anda */
   padding-right: 20px;
   padding-bottom: 0px;
   padding-top: 0px;
   /* background: linear-gradient(135deg, #0f4c75 0%, #1c8edb 100%); */
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       #1b4d75 0%,
       #256ba2 45%,
       #3b8fcf 85%,
-      #1b4d75 150%
-    ),
-    radial-gradient(
-      circle at 90% 50%,
+      #1b4d75 150%),
+    radial-gradient(circle at 90% 50%,
       rgba(255, 255, 255, 0.15),
-      transparent 60%
-    );
+      transparent 60%);
   min-height: 400px;
   position: relative;
   margin-block: 5%;
@@ -484,7 +483,8 @@ body {
 }
 
 .banner-image img {
-  height: 380px; /* Atau sesuaikan dengan kebutuhan */
+  height: 380px;
+  /* Atau sesuaikan dengan kebutuhan */
   width: auto;
   object-fit: contain;
   margin-bottom: 0;
@@ -547,6 +547,7 @@ body {
   color: #444;
   line-height: 1.4;
 }
+
 /* footer */
 .footer {
   margin-top: 5rem;
@@ -623,6 +624,7 @@ body {
   padding: 10px;
   margin: 5px;
 }
+
 .product-card.show {
   display: block;
 }
@@ -668,25 +670,101 @@ body {
   transform: translateY(0);
 }
 
-
-.navicons-responsive{
+.navicons-responsive {
   display: none;
 }
 
+.navlinks-icon {
+  display: none;
+}
 
- @media (max-width: 427px) {
+  .dropdown-responsive {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+@media (max-width: 427px) {
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown-responsive {
+    display: block;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 180px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Saat aktif */
+  .dropdown-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdown-menu a {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-menu hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0;
+  }
+
+  .dropdown-menu .icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+
+  .navlinks-icon {
+    display: block;
+  }
+
   body {
     padding: 0;
     margin: 0;
     font-family: "Bricolage Grotesque";
     background-color: #feffed;
   }
-  
+
   .navicons-responsive {
-    display: block ;
+    display: block;
   }
-  
-  .nav-links, .nav-icons{
+
+  .nav-links,
+  .nav-icons {
     display: none;
   }
 
@@ -701,6 +779,7 @@ body {
   .hero-text {
     margin-left: 30px;
   }
+
   .hero-text h2 {
     font-size: 2rem;
   }
@@ -708,8 +787,8 @@ body {
   .hero-text h1 {
     font-size: 3rem;
   }
-  
-  .btn{
+
+  .btn {
     padding: 10px 15px;
     font-size: 15px;
     width: 70%;
@@ -722,40 +801,41 @@ body {
   }
 
   .categories {
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-.category-tabs {
-  gap: 10px;
-  /* margin-bottom: 1px; */
-}
-.product-grid {
-  overflow-x: auto;
-  /* white-space: nowrap; */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
-  row-gap: 1px !important;
-  margin: 10px;
-}
+  .category-tabs {
+    gap: 10px;
+    /* margin-bottom: 1px; */
+  }
 
-.card-body {
-  padding: 10px;
-  padding-top: 230px;
-  display: flex;
-  flex-direction: column;
-}
+  .product-grid {
+    overflow-x: auto;
+    /* white-space: nowrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 1px !important;
+    margin: 10px;
+  }
 
-.product-list {
-  margin-bottom: 10px;
-  width: 200px;
-}
+  .card-body {
+    padding: 10px;
+    padding-top: 230px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-list {
+    margin-bottom: 10px;
+    width: 200px;
+  }
 
   .banner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0px; 
+    padding: 0px;
   }
 
   .banner-content {
@@ -797,14 +877,12 @@ body {
     border-radius: 8px;
     opacity: 0.9;
   }
+
   .footer-container {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
+  }
 }
-} 
-
-
-

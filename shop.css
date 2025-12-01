@@ -158,6 +158,28 @@ body {
   cursor: pointer;
 }
 
+select,::picker(select) {
+appearance: base-select;
+}
+
+select {
+  border-radius: 10px;
+  padding: 10px;
+  padding-inline: 20px;
+  transition: 0.3s;
+}
+
+select:hover,select:focus {
+  background-color: #eee;
+}
+
+option {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  border: 2px solid #000000;
+}
+
 .control-dropdown label {
   margin-right: 5px;
 }
@@ -168,7 +190,7 @@ body {
   background: transparent;
   font-weight: bold;
   color: #333;
-  padding-right: 5px;
+  /* padding-right: 0px; */
   cursor: pointer;
 }
 
