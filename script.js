@@ -112,13 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollTrigger();
 });
 
-const icons = document.querySelectorAll("svg, i[data-lucide]");
-icons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    alert("Maaf, fitur ini belum tersedia.");
-  });
-});
-
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -142,3 +135,6 @@ const dropdown = document.getElementById("dropdownMenu");
 hamburger.addEventListener("click", () => {
   dropdown.classList.toggle("active");
 });
+
+
+
