@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About us</title>
-
+  <title>Meowketplace</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="abt.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="abt.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <script src="abt.js"></script>
+  <script src="https://lucide.dev/icons/handbag"></script>
 </head>
 
 <body>
@@ -34,30 +36,22 @@
       <a href="#"><i data-lucide="heart"></i></a>
       <a href="#"><i data-lucide="user-round"></i></a>
     </div>
+
+    <!-- <div class="navbar">
+        <img src="logo.png" class="logo" />
+      </div> -->
+
+    <!-- Hamburger -->
     <div class="hamburger" id="hamburger">
       <div class="navicons-responsive">
         <a href="#"><i data-lucide="text-align-justify"></i></a>
       </div>
-
-
-      <div class="dropdown-responsive">
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="index.html">Home</a>
-          <a href="shop.html">Shop</a>
-          <a href="abt.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-          <hr />
-          <div class="icons">
-            <a href="#"><i data-lucide="handbag"></i></a>
-            <a href="#"><i data-lucide="heart"></i></a>
-            <a href="#"><i data-lucide="user-round"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
 
-    </header>
-
+    <!-- <div class="navicons-responsive">
+        <a href="#"><i data-lucide="text-align-justify"></i></a>
+      </div> -->
+  </header>
 
 
   <div class="container scroll-reveal reveal-up">
@@ -177,6 +171,23 @@
 
   </div>
 
+
+  <div class="dropdown-responsive">
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="abt.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <hr />
+      <div class="icons">
+        <a href="#"><i data-lucide="handbag"></i></a>
+        <a href="#"><i data-lucide="heart"></i></a>
+        <a href="#"><i data-lucide="user-round"></i></a>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer scroll-reveal reveal-parallax">
     <div class="footer-container">
       <div class="footer-section">
@@ -218,12 +229,12 @@
     </div>
   </footer>
 
+  <script src="abt.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
   </script>
 
-  <script src="abt.js"></script>
 </body>
 
 </html>

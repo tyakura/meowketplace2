@@ -538,6 +538,10 @@ h2 {
   display: none;
 }
 
+.dropdown-menu {
+  display: none;
+}
+
 .dropdown-responsive {
   display: none;
 }
@@ -546,71 +550,67 @@ h2 {
   display: none;
 }
 
-.dropdown-menu {
-  display: none;
+@media (max-width: 427px) {
+.hamburger {
+  display: block;
 }
 
-@media (max-width: 427px) {
-  .hamburger {
-    display: block;
-  }
-
   .dropdown-responsive {
-    display: contents !important;
-  }
+  display: block;
+}
 
-  /* Hamburger icon */
-  .hamburger {
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-  }
+/* Hamburger icon */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
 
-  /* Dropdown */
-  .dropdown-menu {
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    background: white;
-    width: 180px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: white;
+  width: 180px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.25s ease;
-  }
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
 
-  /* Saat aktif */
-  .dropdown-menu.actives {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
+/* Saat aktif */
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
-  .dropdown-menu a {
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
-  }
+.dropdown-menu a {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
 
-  .dropdown-menu hr {
-    border: none;
-    border-bottom: 1px solid black;
-    margin: 0;
-  }
+.dropdown-menu hr {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
 
-  .dropdown-menu .icons {
-    display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-  }
+.dropdown-menu .icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
   .navlinks-icon {
     display: block;
   }
@@ -748,7 +748,7 @@ h2 {
   .our-mission,
   .our-values,
   .our-vision {
-    height: 80vh;
+    height: 95%;
   }
 
   .ov,
