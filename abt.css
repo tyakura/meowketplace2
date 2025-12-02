@@ -551,9 +551,6 @@ h2 {
 }
 
 @media (max-width: 427px) {
-.dropdown-menu{
-  display: block;
-}
   .hamburger {
     display: block;
   }
